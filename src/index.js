@@ -62,3 +62,42 @@ function drawDots(object) {
     circle2d.closePath();
   }
 }
+
+// Counts Pi with dots, circle and square data
+function countPi(object) {
+  var points_total = 0;
+  var points_inside = 0;
+
+  while (points_total < object.points_value) {
+    var x = Math.random();
+    var y = Math.random();
+    var distance = Math.sqrt(x * x + y * y);
+
+    points_total++;
+
+    if (distance < 1) {
+      points_inside++;
+    } else {
+      console.log(
+        points_inside +
+          "/" +
+          points_total +
+          " pi == " +
+          (4 * points_inside) / points_total
+      );
+    }
+  }
+
+  var result = document.getElementById("pi_result");
+  var h1 = document.createElement("h1");
+
+  h1.innerText =
+    points_inside +
+    "/" +
+    points_total +
+    " pi == " +
+    (4 * points_inside) / points_total;
+  h1.style.textAlign = "center";
+
+  result.appendChild(h1);
+}
