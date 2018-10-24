@@ -117,3 +117,5 @@ function generateSquareAndCircle() {
   createCircle(holdCircleValues());
   resetPoints();
 }
+
+drawSquare.addEventListener("click", generateSquareAndCircle);
