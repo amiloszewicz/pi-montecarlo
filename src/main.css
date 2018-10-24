@@ -70,3 +70,13 @@ svg {
   margin-bottom: 7%;
 }
 /* ---------------------------- END OF ARTICLE CSS ---------------------------- */
+
+/* ---------------------------- PROGRAM SECTION CSS ---------------------------- */
+#input_section{
+  text-align: center;
+};
+
+.square_size {
+  width: 450px !important;
+};
+/* ---------------------------- END OF PROGRAM SECTION CSS ---------------------------- */
