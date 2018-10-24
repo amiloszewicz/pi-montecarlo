@@ -107,3 +107,13 @@ function resetPoints() {
   points_amount.value = "";
   squareSideLength.value = "";
 }
+
+// Calls for functions in order to create square and circle inside it, draw dots, reset points etc.
+function generateSquareAndCircle() {
+  holdCircleValues();
+  addStyleToCanvasElement();
+  countPi(holdCircleValues());
+  drawDots(holdCircleValues());
+  createCircle(holdCircleValues());
+  resetPoints();
+}
