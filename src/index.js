@@ -43,3 +43,22 @@ function addStyleToCanvasElement() {
   square_div.style.textAlign = "center";
   square_div.style.margin = "40px 0 40px 0";
 }
+
+// Draws dots inside square
+function drawDots(object) {
+  var radius = 0.75;
+  var max = squareSideLength.value * 10;
+
+  circle2d.clearRect(0, 0, circle.width, circle.height);
+
+  for (var i = 0; i < object.points_value; i++) {
+    var rand_x = Math.random(i) * max;
+    var rand_y = Math.random(i) * max;
+
+    circle2d.beginPath();
+    circle2d.fillStyle = "#0022FE";
+    circle2d.arc(rand_x, rand_y, radius, 0, 2 * Math.PI);
+    circle2d.fill();
+    circle2d.closePath();
+  }
+}
