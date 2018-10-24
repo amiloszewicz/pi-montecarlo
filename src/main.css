@@ -80,3 +80,22 @@ svg {
   width: 450px !important;
 };
 /* ---------------------------- END OF PROGRAM SECTION CSS ---------------------------- */
+
+/* ---------------------------- REVISION, REFERENCES, AUTHORS SECTION CSS ---------------------------- */
+.section_title {
+  color: #333333;
+  max-width: 625px;
+  margin-left: 8%;
+  margin-top: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+#principals_list,
+#revision_list {
+  list-style: none;
+}
+/* ---------------------------- END OF REVISION, REFERENCES, AUTHORS SECTION CSS ---------------------------- */
