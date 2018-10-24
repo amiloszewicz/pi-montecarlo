@@ -17,3 +17,16 @@ function holdCircleValues() {
     number: number
   };
 }
+
+function createCircle(object) {
+  circle2d.beginPath();
+  circle2d.arc(
+    object.number * 5,
+    object.number * 5,
+    object.number * 5,
+    0,
+    2 * Math.PI
+  );
+  circle2d.stroke();
+  circle2d.closePath();
+}
