@@ -101,3 +101,9 @@ function countPi(object) {
 
   result.appendChild(h1);
 }
+
+// Cleans inputed values after creating canvas element - square with circle inside
+function resetPoints() {
+  points_amount.value = "";
+  squareSideLength.value = "";
+}
