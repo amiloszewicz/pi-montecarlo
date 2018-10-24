@@ -18,6 +18,7 @@ function holdCircleValues() {
   };
 }
 
+// Creates circle via canvas 5x bigger than given value
 function createCircle(object) {
   circle2d.beginPath();
   circle2d.arc(
@@ -29,4 +30,16 @@ function createCircle(object) {
   );
   circle2d.stroke();
   circle2d.closePath();
+}
+
+// Adding styling for drawn canvas square
+function addStyleToCanvasElement() {
+  var canvas = document.getElementsByTagName("canvas")[0];
+  var square_div = document.getElementById("square_place");
+
+  canvas.width = squareSideLength.value * 10;
+  canvas.height = squareSideLength.value * 10;
+
+  square_div.style.textAlign = "center";
+  square_div.style.margin = "40px 0 40px 0";
 }
