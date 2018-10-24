@@ -11,3 +11,62 @@ hr {
   margin: 7% auto 10% auto;
   max-width: 625px;
 }
+
+/* ---------------------------- HEADER CSS ---------------------------- */
+header {
+  margin: 15% 0 15% 0;
+}
+
+#title {
+  color: #333333;
+  text-align: center;
+  font-size: 3em;
+}
+
+#author {
+  color: #666666;
+  text-align: center;
+  font-weight: 500;
+}
+
+#author:before {
+  content: "—";
+  padding: 0 10px;
+}
+
+#author:after {
+  content: "—";
+  padding: 0 10px;
+}
+/* ---------------------------- END OF HEADER CSS ---------------------------- */
+
+/* ---------------------------- ARTICLE CSS ---------------------------- */
+p {
+  color: #333333;
+  font-size: 22px;
+  max-width: 625px;
+  margin-left: 8%;
+  line-height: 130%;
+}
+
+li {
+  color: #333333;
+  font-size: 22px;
+  max-width: 625px;
+  margin-left: 8%;
+  line-height: 130%;
+}
+
+#the_square_title {
+  color: #333333;
+  text-align: center;
+  font-size: 2em;
+  margin: 10% 0 5% 0;
+}
+
+svg {
+  display: block;
+  margin: auto;
+  margin-bottom: 7%;
+}
+/* ---------------------------- END OF ARTICLE CSS ---------------------------- */

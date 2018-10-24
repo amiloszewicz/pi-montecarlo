@@ -12,6 +12,58 @@
       <h1 id="title">Estimating Pi using the Monte Carlo method</h1>
       <p id="author">by Adam Miłoszewicz</p>
     </header>
+
+    <article>
+      <p>Monte Carlo methods are a broad class of computational algorithms 
+          that rely on repeated random sampling to obtain numerical results. 
+          Their essential idea is using randomness to solve problems that might be deterministic in principle. 
+          They are often used in physical and mathematical problems and are most useful when it is difficult or impossible to use other approaches.
+      </p>
+      <p>Monte Carlo methods are mainly used in three problem classes:</p>
+      <ul>
+          <li>optimization</li>
+          <li>numerical integration</li>
+          <li>generating draws</li>
+      </ul>
+      <p>
+          from a probability distribution. Pi approximation is a simple example 
+          that illustrates the idea of how the Monte Carlo method works.
+      </p>
+      <h2 id="the_square_title">The square</h2>
+      <figure>
+          <svg x="0px" y="0px" width="200px" height="200px">
+              <rect width="200" height="200" fill="silver" stroke="silver" stroke-width="2"></rect>
+              <circle cx="100" cy="100" r="100" stroke="blue" stroke-width="2" fill="blue"></circle>
+              <rect x="100" y="100" width="100" height="100" fill="none" stroke="red" stroke-width="2"></rect>
+          </svg>
+      </figure>
+      <ul>
+          <li>The blue circle square has an area of πr².</li>
+          <li>The gray square has an area of (2 × r)² = 4r².</li>
+          <li>The ratio of the circle area to square area is 
+              <em>p</em>
+              =
+              <span>
+                  <span>πr²</span>
+                  <span>/</span>
+                  <span>4r²</span>
+              </span>
+              =
+              <span>
+                  <span>π</span>
+                  <span>/</span>
+                  <span>4</span>
+              </span>
+              .
+          </li>
+          <li>Therefore the value of π is 4×p.</li>
+          <li>The red square contains ¼ of blue and gray points so the ratio of points is the same (p).</li>
+      </ul>
+      <p>The implementation takes a random point inside the unit square of size 1×1 and checks if that point lies within 
+          the blue circle. The ratio of points inside the circle to all generated points is p. 
+          Multiplying p by 4 gives the approximate value of π.
+      </p>
+  </article>
   </main>
   <script src="main.js"></script>
 </body>
