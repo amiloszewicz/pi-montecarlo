@@ -81,12 +81,20 @@ svg {
   text-align: center;
 }
 
-;
-.square_size {
+#draw_square {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 22px;
+  color: white;
+  background-color: #bebebe;
+  border: none;
+  border-radius: 5%;
+};
+
+#square_size {
   width: 450px !important;
 }
 
-;
 /* ---------------------------- END OF PROGRAM SECTION CSS ---------------------------- */
 
 /* ---------------------------- REVISION, REFERENCES, AUTHORS SECTION CSS ---------------------------- */
