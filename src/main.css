@@ -95,6 +95,10 @@ svg {
   width: 450px !important;
 }
 
+#pi_result {
+  text-align: center;
+}
+
 /* ---------------------------- END OF PROGRAM SECTION CSS ---------------------------- */
 
 /* ---------------------------- REVISION, REFERENCES, AUTHORS SECTION CSS ---------------------------- */
