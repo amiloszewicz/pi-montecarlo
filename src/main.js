@@ -8,24 +8,34 @@ let dotsNumber;
 
 // Estimate Pi
 const estimatePi = e => {
+  e.stopImmediatePropagation();
   initValues();
 
   const squareSize = document.getElementById("square_size").value;
   dotsNumber = document.getElementById("points_amount").value;
+  const isDigit = /\d/;
 
-  context = setCanvas(squareSize);
+  const inputSize = isDigit.test(squareSize);
+  const inputPoint = isDigit.test(dotsNumber);
 
-  drawSquare(context, squareSize);
-  drawCircle(context, squareSize);
+  if (inputSize & inputPoint) {
+    context = setCanvas(squareSize);
 
-  for (let i = 0; i <= dotsNumber; i++) {
-    let x = Math.floor(Math.random() * squareSize);
-    let y = Math.floor(Math.random() * squareSize);
+    drawSquare(context, squareSize);
+    drawCircle(context, squareSize);
 
-    setTimeout(function() {
-      calculatePi(x, y, squareSize);
-      drawPoints(context, x, y);
-    }, 500)
+    for (let i = 0; i <= dotsNumber; i++) {
+      let x = Math.floor(Math.random() * squareSize);
+      let y = Math.floor(Math.random() * squareSize);
+
+      setTimeout(function() {
+        calculatePi(x, y, squareSize);
+        drawPoints(context, x, y);
+      }, 500);
+    }
+  } else {
+    console.log('went wrong');
+    document.getElementById("pi_result").innerText = 'Insert correct values';
   }
 };
 
@@ -33,7 +43,7 @@ const estimatePi = e => {
 const initValues = () => {
   pi = 0;
   pointsInside = 0;
-  dotsNumber =+ (document.getElementById('points_amount').value);
+  dotsNumber = +document.getElementById("points_amount").value;
 };
 
 // Init canvas element
@@ -85,9 +95,9 @@ const calculatePi = (x, y, size) => {
     pointsInside++;
   }
 
-  pi = 4 * pointsInside / dotsNumber;
+  pi = (4 * pointsInside) / dotsNumber;
 
-  document.getElementById('pi_result').innerText = pi;
+  document.getElementById("pi_result").innerText = pi;
 };
 
 generateButton.addEventListener("click", estimatePi);
